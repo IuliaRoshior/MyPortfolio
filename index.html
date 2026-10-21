@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#110c10">
+<meta name="description" content="Iulia Roshior: web design, frontend development, Figma interfaces, print design and photo restoration.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src 'self' https://*.github.io https://*.onrender.com https://www.figma.com https://embed.figma.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Iulia Roshior — Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+
+<!-- Sticky header: logo + primary navigation -->
+<header class="bar">
+  <a class="logo" href="#top" aria-label="Iulia Roshior, back to top">
+    <span class="mark" aria-hidden="true">IR</span><span class="word">Iulia Roshior</span>
+  </a>
+  <nav aria-label="Primary"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+<!-- Introduction -->
+<section class="hero wrap">
+  <p class="eyebrow">Portfolio · 2026</p>
+  <h1>Soft edges,<br><em>sharp</em> thinking.</h1>
+  <p class="lead">Web designer &amp; frontend developer. Websites, Figma interfaces, print layouts and photo restoration.</p>
+  <a class="btn" href="#work">View selected work</a>
+</section>
+
+<!-- Projects / Portfolio -->
+<section id="work" class="wrap" aria-labelledby="work-title">
+  <p class="eyebrow">Selected work</p>
+  <h2 id="work-title">The archive</h2>
+  <div class="tools">
+    <div class="group" id="filters" role="group" aria-label="Filter by category">
+      <button class="chip" type="button" data-cat="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-cat="web" aria-pressed="false">Websites</button>
+      <button class="chip" type="button" data-cat="figma" aria-pressed="false">Figma</button>
+      <button class="chip" type="button" data-cat="print" aria-pressed="false">Print</button>
+      <button class="chip" type="button" data-cat="restoration" aria-pressed="false">Restoration</button>
+    </div>
+    <div class="group" id="views" role="group" aria-label="Layout">
+      <button class="chip" type="button" data-view="grid" aria-pressed="true">Grid</button>
+      <button class="chip" type="button" data-view="index" aria-pressed="false">List</button>
+    </div>
+  </div>
+  <p class="hint"><span id="count" role="status"></span> · <span id="hint">Drag to explore, click to preview</span></p>
+</section>
+<ul class="track" id="grid" aria-label="Works, grid view"></ul>
+<div class="wrap"><ol class="rows" id="index" aria-label="Works, index view" hidden></ol></div>
+<img class="peek" id="peek" alt="" width="180" height="225">
+
+<!-- About -->
+<section id="about" class="wrap" aria-labelledby="about-title">
+  <p class="eyebrow">About</p>
+  <h2 id="about-title">Three years of freelance craft</h2>
+  <div class="cols">
+    <p><strong>Websites &amp; apps.</strong> Responsive, accessible frontends built by hand, from landing pages to small full-stack tools.</p>
+    <p><strong>Interface design.</strong> Layouts, flows and visual systems in Figma, for desktop and mobile.</p>
+    <p><strong>Print &amp; restoration.</strong> Photo books, calendars and careful before-and-after restoration.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="wrap" aria-labelledby="contact-title">
+  <p class="eyebrow">Contact</p>
+  <h2 id="contact-title">Let’s make something beautiful</h2>
+  <ul class="links">
+    <li><a href="mailto:rosiorulia@gmail.com">Email</a></li>
+    <li><a href="https://t.me/julieRo" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+    <li><a href="https://www.linkedin.com/in/iulia-rosior-0202502bb/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://github.com/IuliaRoshior" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+  </ul>
+</section>
+</main>
+
+<footer class="wrap"><p>© Iulia Roshior</p></footer>
+
+<!-- Work viewer: live preview inside the site -->
+<dialog id="viewer" aria-labelledby="v-title">
+  <div class="v-head">
+    <div><p class="eyebrow" id="v-meta"></p><h3 id="v-title"></h3></div>
+    <div class="v-actions">
+       <div id="v-devices" role="group" aria-label="Preview size">
+          <button class="chip" type="button"
+            id="v-desktop" aria-pressed="true">Desktop</button>
+          <button class="chip" type="button" id="v-mobile" aria-pressed="false">Mobile</button>
+        </div>
+      <button class="chip" type="button" id="v-prev" aria-label="Previous work">←</button>
+      <button class="chip" type="button" id="v-next" aria-label="Next work">→</button>
+      <a class="chip" id="v-open" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+      <button class="chip" type="button" id="v-close">Close</button>
+    </div>
+  </div>
+  <div class="v-body" id="v-body"></div>
+</dialog>
+
+<script src="js/script.js"></script>
+</body>
+</html>

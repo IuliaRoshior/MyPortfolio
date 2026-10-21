@@ -336,7 +336,6 @@ loadRestorations().catch(() => {});
     threshold: 0,
     rootMargin: "0px 0px -20px 0px"
 });
-
     function prepareElements() {
         document.querySelectorAll(selector).forEach((element) => {
             if (prepared.has(element)) return;

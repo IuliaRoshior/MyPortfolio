@@ -12,22 +12,24 @@ const fig = (id, slug, node) => `https://www.figma.com/design/${id}/${slug}?node
 
 /* One entry per work. Optional `cover: "assets/covers/<id>.jpg"` sets its own thumbnail; otherwise the default SVG is used. */
 const PROJECTS = [
-  { id: "diary", t: "My Diary", c: "web", y: 2025, k: "site", u: "https://mydiary-project.onrender.com"},
-  { id: "shine", t: "ShineAuto", c: "web", y: 2025, k: "site", u: "https://iuliaroshior.github.io/CarWash/" },
-  { id: "mood", t: "Mood Calendar", c: "web", y: 2025, k: "site", u: "https://iuliaroshior.github.io/MoodCalendar/" },
+  { id: "diary", t: "My Diary", c: "web", y: 2026, k: "site", u: "https://mydiary-project.onrender.com"},
+  { id: "shine", t: "ShineAuto", c: "web", y: 2024, k: "site", u: "https://iuliaroshior.github.io/CarWash/" },
+  { id: "mood", t: "Mood Calendar", c: "web", y: 2026, k: "site", u: "https://iuliaroshior.github.io/MoodCalendar/" },
   { id: "atelier", t: "Atelier Épur", c: "web", y: 2026, k: "site", u: "https://iuliaroshior.github.io/shopifyFrance/" },
   { id: "bloom", t: "Bloom & Co.", c: "web", y: 2025, k: "site", u: "https://iuliaroshior.github.io/BloomFlowerShop/" },
-  { id: "todo", t: "To Do List", c: "web", y: 2024, k: "site", u: "https://iuliaroshior.github.io/JS_Individual_work/" },
-  { id: "diary-ui", t: "My Diary UI", c: "figma", y: 2025, k: "figma", u: fig("0vRhFU2eazqTAlR0LOYsiQ", "My-Diary-%7C-Task-Dashboard-%C2%B7-Desktop---Mobile", "0-1") },
-  { id: "shine-ui", t: "ShineAuto UI", c: "figma", y: 2025, k: "figma", u: fig("wRq4ayyEkqPUXJiH55osvN", "ShineAuto-%7C-Premium-Car-Wash-%E2%80%94-Responsive-Landing-Page", "0-1") },
-  { id: "mood-ui", t: "Mood Calendar UI", c: "figma", y: 2025, k: "figma", u: fig("6PglL6cYKzYGQQTt6wCVKl", "Mood-Calendar-%7C-Responsive-UI", "0-1") },
+  { id: "todo", t: "To Do List", c: "web", y: 2023, k: "site", u: "https://iuliaroshior.github.io/JS_Individual_work/" },
+  { id: "diary-ui", t: "My Diary UI", c: "figma", y: 2026, k: "figma", u: fig("0vRhFU2eazqTAlR0LOYsiQ", "My-Diary-%7C-Task-Dashboard-%C2%B7-Desktop---Mobile", "0-1") },
+  { id: "shine-ui", t: "ShineAuto UI", c: "figma", y: 2024, k: "figma", u: fig("wRq4ayyEkqPUXJiH55osvN", "ShineAuto-%7C-Premium-Car-Wash-%E2%80%94-Responsive-Landing-Page", "0-1") },
+  { id: "mood-ui", t: "Mood Calendar UI", c: "figma", y: 2026, k: "figma", u: fig("6PglL6cYKzYGQQTt6wCVKl", "Mood-Calendar-%7C-Responsive-UI", "0-1") },
   { id: "atelier-ui", t: "Atelier Épur UI", c: "figma", y: 2026, k: "figma", u: fig("DYjAKQcfPbfUq1qBpAiMKM", "Atelier_Epur", "0-1") },
   { id: "bloom-ui", t: "Bloom & Co. UI", c: "figma", y: 2025, k: "figma", u: fig("pw8iR0tRcEjNH3IVNbbBzU", "Bloom---Co.-%E2%80%94-Flower-Boutique-%7C-Desktop---Mobile-UI", "0-1") },
-  { id: "oasis", t: "Oasis Stays", c: "figma", y: 2025, k: "figma", u: fig("OJunMR0UjVBQmg65RvuyDl", "Oasis-Stays-%E2%80%94-Short-Term-Rental-Website-Wireframes", "0-1") },
-  { id: "bus", t: "BusGo", c: "figma", y: 2025, k: "figma", u: fig("ILhD3aRM60nbERjDLAEweW", "%D0%92%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82-%E2%84%965-%E2%80%94-%D0%9F%D0%BE%D0%BA%D1%83%D0%BF%D0%BA%D0%B0-%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D0%B0-%D0%BD%D0%B0-%D0%B0%D0%B2%D1%82%D0%BE%D0%B1%D1%83%D1%81", "0-1") },
-  { id: "calendar", t: "Little Moments", c: "print", y: 2026, k: "pdf", u: "assets/pdf/Calendario.PDF" },
-  { id: "sea", t: "Sea Memories", c: "print", y: 2025, k: "pdf", u: "assets/pdf/PhotoBookSea.PDF" },
-  { id: "elvira", t: "Elvira", c: "print", y: 2025, k: "pdf", u: "assets/pdf/PhotoBookElvira.PDF" }
+  { id: "oasis", t: "Oasis Stays", c: "figma", y: 2023, k: "figma", u: fig("OJunMR0UjVBQmg65RvuyDl", "Oasis-Stays-%E2%80%94-Short-Term-Rental-Website-Wireframes", "0-1") },
+  { id: "bus", t: "BusGo", c: "figma", y: 2026, k: "figma", u: fig("ILhD3aRM60nbERjDLAEweW", "%D0%92%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82-%E2%84%965-%E2%80%94-%D0%9F%D0%BE%D0%BA%D1%83%D0%BF%D0%BA%D0%B0-%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D0%B0-%D0%BD%D0%B0-%D0%B0%D0%B2%D1%82%D0%BE%D0%B1%D1%83%D1%81", "0-1") },
+  { id: "sea", t: "Sea Memories", c: "print", y: 2024, k: "pdf", u: "assets/pdf/PhotoBookSea.PDF" },
+  { id: "elvira", t: "Elvira", c: "print", y: 2025, k: "pdf", u: "assets/pdf/PhotoBookElvira.PDF" },
+  { id: "aura", t: "AURA travel", c: "print", y: 2026, k: "pdf", u: "assets/pdf/AURA_Travel.PDF" },
+  { id: "cream", t: "VERA", c: "print", y: 2026, k: "pdf", u: "assets/pdf/creamAdvertisement.PDF" },
+  { id: "calendar", t: "Calendario", c: "print", y: 2025, k: "pdf", u: "assets/pdf/Calendario.PDF" },
 ];
 
 const $ = (id) => document.getElementById(id);

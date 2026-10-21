@@ -109,6 +109,7 @@ function render() {
   grid.replaceChildren(...list.map(tile));
   index.replaceChildren(...list.map(row));
   grid.hidden = state.view !== "grid";
+  $("gallery").hidden = state.view !== "grid";
   index.hidden = state.view !== "index";
   $("count").textContent = `${list.length} ${list.length === 1 ? "work" : "works"}`;
   $("hint").textContent = state.view === "grid" ? "Drag to explore, click to preview" : "Hover for a preview, click to open";
@@ -386,3 +387,51 @@ $("v-desktop").addEventListener("click", () => {
 $("v-mobile").addEventListener("click", () => {
     setPreviewSize(true);
 });
+
+/* ---------- Gallery arrows ---------- */
+(() => {
+    const prev = $("grid-prev");
+    const next = $("grid-next");
+
+    function updateArrows() {
+        const maxScroll = grid.scrollWidth - grid.clientWidth;
+
+        prev.disabled = grid.scrollLeft <= 2;
+        next.disabled = grid.scrollLeft >= maxScroll - 2;
+    }
+
+    function moveGallery(direction) {
+        const card = grid.querySelector("li");
+        if (!card) return;
+
+        const gap = parseFloat(getComputedStyle(grid).gap) || 0;
+        const distance = card.getBoundingClientRect().width + gap;
+
+        grid.scrollBy({
+            left: direction * distance,
+            behavior: window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches ? "auto" : "smooth"
+        });
+    }
+
+    prev.addEventListener("click", () => moveGallery(-1));
+    next.addEventListener("click", () => moveGallery(1));
+
+    grid.addEventListener("scroll", updateArrows, {
+        passive: true
+    });
+
+    const resizeObserver = new ResizeObserver(updateArrows);
+    resizeObserver.observe(grid);
+
+    const contentObserver = new MutationObserver(() => {
+        requestAnimationFrame(updateArrows);
+    });
+
+    contentObserver.observe(grid, {
+        childList: true
+    });
+
+    updateArrows();
+})();

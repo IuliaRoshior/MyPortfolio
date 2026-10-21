@@ -53,7 +53,25 @@
   </div>
   <p class="hint"><span id="count" role="status"></span> · <span id="hint">Drag to explore, click to preview</span></p>
 </section>
-<ul class="track" id="grid" aria-label="Works, grid view"></ul>
+<div class="gallery" id="gallery">
+  <button class="gallery-arrow gallery-arrow--prev"
+          id="grid-prev" type="button"
+          aria-label="Previous works" aria-controls="grid">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <path d="M39 12 19 32l20 20"/>
+    </svg>
+  </button>
+
+  <ul class="track" id="grid" aria-label="Works, grid view"></ul>
+
+  <button class="gallery-arrow gallery-arrow--next"
+          id="grid-next" type="button"
+          aria-label="Next works" aria-controls="grid">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <path d="m25 12 20 20-20 20"/>
+    </svg>
+  </button>
+</div>
 <div class="wrap"><ol class="rows" id="index" aria-label="Works, index view" hidden></ol></div>
 <img class="peek" id="peek" alt="" width="180" height="225">
 

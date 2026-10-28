@@ -25,11 +25,8 @@ const PROJECTS = [
   { id: "bloom-ui", t: "Bloom & Co. UI", c: "figma", y: 2025, k: "figma", u: fig("pw8iR0tRcEjNH3IVNbbBzU", "Bloom---Co.-%E2%80%94-Flower-Boutique-%7C-Desktop---Mobile-UI", "0-1") },
   { id: "oasis", t: "Oasis Stays", c: "figma", y: 2023, k: "figma", u: fig("OJunMR0UjVBQmg65RvuyDl", "Oasis-Stays-%E2%80%94-Short-Term-Rental-Website-Wireframes", "0-1") },
   { id: "bus", t: "BusGo", c: "figma", y: 2026, k: "figma", u: fig("ILhD3aRM60nbERjDLAEweW", "%D0%92%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82-%E2%84%965-%E2%80%94-%D0%9F%D0%BE%D0%BA%D1%83%D0%BF%D0%BA%D0%B0-%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D0%B0-%D0%BD%D0%B0-%D0%B0%D0%B2%D1%82%D0%BE%D0%B1%D1%83%D1%81", "0-1") },
-  { id: "sea", t: "Sea Memories", c: "print", y: 2024, k: "pdf", u: "assets/pdf/PhotoBookSea.PDF" },
-  { id: "elvira", t: "Elvira", c: "print", y: 2025, k: "pdf", u: "assets/pdf/PhotoBookElvira.PDF" },
   { id: "aura", t: "AURA travel", c: "print", y: 2026, k: "pdf", u: "assets/pdf/AURA_Travel.pdf" },
-  { id: "cream", t: "VERA", c: "print", y: 2026, k: "pdf", u: "assets/pdf/creamAdvertisement.PDF" },
-  { id: "calendar", t: "Calendario", c: "print", y: 2025, k: "pdf", u: "assets/pdf/Calendario.PDF" },
+  { id: "cream", t: "VERA", c: "print", y: 2026, k: "pdf", u: "assets/pdf/creamAdvertisement.PDF" }
 ];
 
 const $ = (id) => document.getElementById(id);
